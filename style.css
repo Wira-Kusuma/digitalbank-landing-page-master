@@ -74,11 +74,15 @@ main {
 }
 
 .hero {
+    width: 50%;
+}
+
+.hero>div {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
     justify-content: center;
     align-items: left;
+    flex-direction: column;
+    gap: 2rem;
     padding: 5rem;
 }
 
@@ -91,6 +95,7 @@ main {
 }
 
 .mockups {
+    width: 50%;
     position: relative;
     pointer-events: none;
     user-select: none;
@@ -98,23 +103,24 @@ main {
 
 .mockups img:nth-child(1) {
     position: relative;
-    top: 40px;
-    right: -135px;
+    top: -20px;
+    right: -40px;
     z-index: 2;
 }
 .mockups img:nth-child(2) {
     position: absolute;
-    top: -50px;
-    left: -30px;
+    top: -110px;
+    left: -130px;
     z-index: 1;
 }
 
 @media screen and (max-width:40rem) {
     body {
-        max-width: 100vw;
+        overflow-x: hidden !important;
     }
 
     header {
+        height: 10vh;
         justify-content: space-between;
         transition: ease-in-out 1s;
         padding: 1rem 2rem;
@@ -129,7 +135,7 @@ main {
     }
 
     header.shadow {
-        box-shadow: 0 50px 500px 300px var(--blue-950);
+        box-shadow: 0 50px 1000px 400px var(--blue-950);
     }
 
     nav {
@@ -168,33 +174,42 @@ main {
 
 
     main {
-        max-width: 100%;
         flex-direction: column-reverse;
-        gap: 10rem;
+        padding: 0;
+        width: 100%;
+        height: 90vh;
     }
 
     .hero {
-        justify-content: center;
-        padding: 0;
+        width: 100%;
+        height: 50%;
     }
 
-    .mockups img {
+    .hero>div{
+        padding: 3rem;
+    }
+
+    .mockups{
         width: 100%;
+        height: 50%;
     }
     
+    .mockups img {
+        width: 20rem;
+    }
 
     .mockups img:nth-child(1) {
-        width: 20rem;
         position: relative;
-        top: 215px;
+        top: -105px;
+        left: 10px;
         right: unset;
         z-index: 2;
     }
     .mockups img:nth-child(2) {
         position: absolute;
-        width: 35rem;
-        top: 190px;
-        left: -40px;
+        width: 22rem;
+        top: -50px;
+        left: -30px;
         z-index: 1;
     }
 }
