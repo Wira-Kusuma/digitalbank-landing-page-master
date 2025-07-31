@@ -43,7 +43,7 @@ header img:nth-child(2) {
 
 nav {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav a {
@@ -51,6 +51,11 @@ nav a {
     text-align: center;
     color: var(--gray-600);
     font-size: 0.9rem;
+    transition: ease-in-out 0.2s;
+}
+
+nav a:hover {
+    color: black;
 }
 
 button {
@@ -61,8 +66,15 @@ button {
     border-radius: 100px;
     cursor: pointer;
     color: var(--white);
-    background: linear-gradient(190deg, var(--green-500), var(--cyan-400));
+    background: linear-gradient(30deg, var(--cyan-400),var(--green-500));
     user-select: none;
+    transition: ease-in-out 0.2s;
+    background-repeat: no-repeat;
+}
+
+button:hover {
+    background: linear-gradient(90deg, hsl(136, 64%, 71%), hsl(192, 69%, 71%));
+    background-size: 120%;
 }
 
 main {
@@ -199,6 +211,15 @@ section div:last-child img{
     width: 23% !important;
 }
 
+.card h3 {
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.articles .card h3:hover {
+    color: var(--green-500);
+}
+
 .articles .card>div{
     width: 100%;
     display: flex;
@@ -238,6 +259,10 @@ footer div:nth-child(1) .icon {
     gap: 1rem;
 }
 
+footer div:nth-child(1) .icon img{
+    cursor: pointer;
+}
+
 footer div:nth-child(2) {
     display: flex;
     flex-direction: row;
@@ -251,6 +276,10 @@ footer nav {
 
 footer nav a{
     text-align: left;
+}
+
+footer nav a:hover {
+    color: var(--white);
 }
 
 footer div:nth-child(3) {
