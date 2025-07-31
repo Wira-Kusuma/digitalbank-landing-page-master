@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     font-family: "Public Sans", Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -172,6 +174,8 @@ section div:last-child img{
     width: 50px;
 }
 
+/* articles section */
+
 .articles {
     background-color: var(--gray-50);
 }
@@ -211,6 +215,63 @@ section div:last-child img{
     font-size: 1.2rem !important;
 }
 
+/* footer */
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--blue-950);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer div:nth-child(1) .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+footer div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+}
+
+footer nav {
+    gap: 2rem;
+    flex-flow: column wrap;
+}
+
+footer nav a{
+    text-align: left;
+}
+
+footer div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+
+footer div:nth-child(3) p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+footer div:nth-child(3) button {
+    align-self: right;
+    margin: unset;
+}
+
 @media screen and (max-width:40rem) {
     header {
         height: 10vh;
@@ -231,7 +292,7 @@ section div:last-child img{
         box-shadow: 0 50px 1000px 400px var(--blue-950);
     }
 
-    nav {
+    header>nav {
         width: 90%;
         padding: 2rem 0;
         gap: 1rem;
@@ -255,7 +316,7 @@ section div:last-child img{
         transform: translateY(0);
     }
 
-    nav a {
+    header>nav a {
         font-size: 1.2rem;
         color: var(--blue-950);
         font-weight: 500;
@@ -347,5 +408,22 @@ section div:last-child img{
 
     .articles .card {
         width: 100% !important;
+    }
+
+    /* footer */
+
+    footer {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    footer div:nth-child(2){
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    footer nav a{
+        text-align: center;
     }
 }
