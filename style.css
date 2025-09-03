@@ -94,7 +94,7 @@ main {
 .hero>div {
     display: flex;
     justify-content: center;
-    align-items: left;
+    align-items: start;
     flex-direction: column;
     gap: 2rem;
     padding: 5rem;
@@ -453,5 +453,13 @@ footer div:nth-child(3) button {
 
     footer nav a{
         text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
     }
 }
